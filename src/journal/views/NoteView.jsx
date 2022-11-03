@@ -63,7 +63,7 @@ export const NoteView = () => {
   
 
   return (
-
+   
     <Grid 
       className='animate__animated animate__fadeIn animate__faster'
       container 
@@ -145,5 +145,6 @@ export const NoteView = () => {
         <ImageGallery images = {note.imageUrls} />
 
     </Grid>
+ 
   )
 }

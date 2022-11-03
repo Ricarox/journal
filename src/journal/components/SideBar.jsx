@@ -18,6 +18,7 @@ export const SideBar = ({ drawerWidht = 240, onCloseToggle, showToggle }) => {
 
     const onClickToggle = () => {
         onCloseToggle()
+        return 1
     }
 
 
@@ -86,7 +87,7 @@ export const SideBar = ({ drawerWidht = 240, onCloseToggle, showToggle }) => {
 
                                         res.map(note => (
 
-                                            <SideBarItem key={note.id} {...note} />
+                                            <SideBarItem key={note.id} {...note} onCloseToggle={onCloseToggle} />
                                         ))
 
 
@@ -120,7 +121,7 @@ export const SideBar = ({ drawerWidht = 240, onCloseToggle, showToggle }) => {
 
                                         res2.map(note => (
 
-                                            <SideBarItem key={note.id} {...note} />
+                                            <SideBarItem key={note.id} {...note} onCloseToggle={onClickToggle} />
                                         ))
 
 

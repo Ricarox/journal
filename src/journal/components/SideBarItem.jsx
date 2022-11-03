@@ -9,14 +9,13 @@ import { setActiveNote, StartFavoriteNote, startLoadingNote } from '../../store/
 
 
 
-export const SideBarItem = ({ title = '', body, id, date, imageUrls = [], favorite }) => {
+export const SideBarItem = ({ title = '', body, id, date, imageUrls = [], favorite, onCloseToggle }) => {
 
     const { active: note, isSaving } = useSelector(state => state.journal);
 
     const dispatch = useDispatch();
-
-
-
+    
+    
     const onClickNote = () => {
         dispatch(setActiveNote({
             id,
@@ -26,12 +25,17 @@ export const SideBarItem = ({ title = '', body, id, date, imageUrls = [], favori
             imageUrls,
             favorite
         }))
+        
+        onCloseToggle()
     }
 
+    
+    
     const onFavorite = () => {
+        
 
         onClickNote()
-        //console.log(favorite);
+
         dispatch(StartFavoriteNote(favorite))
 
 
