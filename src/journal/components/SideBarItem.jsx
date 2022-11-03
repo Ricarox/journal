@@ -9,7 +9,7 @@ import { setActiveNote, StartFavoriteNote, startLoadingNote } from '../../store/
 
 
 
-export const SideBarItem = ({ title = '', body, id, date, imageUrls = [], favorite, onCloseToggle }) => {
+export const SideBarItem = ({ title = '', body, id, date, imageUrls = [], favorite }) => {
 
     const { active: note, isSaving } = useSelector(state => state.journal);
 
@@ -26,7 +26,7 @@ export const SideBarItem = ({ title = '', body, id, date, imageUrls = [], favori
             favorite
         }))
         
-        onCloseToggle()
+        
     }
 
     
