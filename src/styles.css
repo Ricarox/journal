@@ -1,3 +1,18 @@
 .box-shadow {
 box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
+@media screen and (max-width: 600px) { 
+    
+        .MuiDrawer-paper{
+            
+            width: calc(100% + 280px) !important;
+        }   
+        .close-button{
+           
+            display:block !important;
+            
+        }
+    
+
+ }
+
